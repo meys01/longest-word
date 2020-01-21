@@ -15,3 +15,9 @@ class TestGame(unittest.TestCase):
         new_game = Game()
         new_game.grid = list('KWIENFUQW') # Force the grid to a test case:
         self.assertIs(new_game.is_valid('FEUN'), False)
+
+    def test_is_valid(self):
+        new_game = Game()
+        new_game.grid = list('KWEUEAKRZ')
+        self.assertIs(new_game.is_valid('EUREKA'), True)
+        self.assertEqual(new_game.grid, list('KWEUEAKRZ'))
