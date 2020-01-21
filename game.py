@@ -9,9 +9,6 @@ class Game:
         for _ in range(9):
             self.grid.append(random.choice(string.ascii_uppercase))
 
-    def random_grid():
-        pass
-
     def is_valid(self, word):
         if not word:
             return False
