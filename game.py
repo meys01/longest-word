@@ -11,6 +11,6 @@ class Game:
 
     def is_valid(self, a_string):
         data = {}
-        r = requests.get(f"https://wagon-dictionary.herokuapp.com/:{a_string}")
+        r = requests.get(f"https://wagon-dictionary.herokuapp.com/{a_string}")
         data = r.json()
         return data['found']
